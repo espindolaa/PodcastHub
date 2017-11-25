@@ -1,11 +1,13 @@
+<script src="contentscript.js"></script>
+
 <style>
 html, body, iframe, h2 {
     margin: 0;
     border: 0;
     padding: 0;
     display: block;
-    width: 100vw;
-    height: 100vh;
+    width: 560;
+    height: 315;
     background: white;
     color: black;
 }
@@ -13,9 +15,7 @@ h2 {
     height: 50px;
     font-size: 20px;
 }
-iframe {
-    height: calc(100vh - 50px);
-}
 </style>
-<h2>Displaying https://robwu.nl in a frame</h2>
-<iframe src="https://robwu.nl/"></iframe>
+  <input type="text" id="link"><br>
+    <button id="but">Go!</button>
+<iframe id = "frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
