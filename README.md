@@ -1,3 +1,3 @@
 # chromeExtension
 
-https://developer.chrome.com/extensions/getstarted
+http://jqueryui.com/dialog/#default
