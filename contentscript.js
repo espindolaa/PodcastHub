@@ -10,7 +10,7 @@ function handler() {
   var result =  (match&&match[7].length==11)? match[7] : false;
   window.alert(result);
   var iframe = document.getElementById("frame") 
-  iframe.src = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + result + '" frameborder="0"></iframe>'; 
+  iframe.src = "https://www.youtube.com/embed/" + result; 
 }
 
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/mvT7wws6eAU" frameborder="0"></iframe>
