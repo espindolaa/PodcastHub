@@ -1,4 +1,6 @@
 <script src="contentscript.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="custom.css">
 
 <style>
 html, body, iframe, h2 {
@@ -16,6 +18,12 @@ h2 {
     font-size: 20px;
 }
 </style>
-  <input type="text" id="link"><br>
-    <button id="but">Go!</button>
+
+<div class="input-group">
+    <input id="link" type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+    <span class="input-group-btn">
+        <button id="but" class="btn btn-secondary" type="button">Go!</button>
+    </span>
+</div>
+
 <iframe id = "frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
