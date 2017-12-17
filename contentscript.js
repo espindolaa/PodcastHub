@@ -15,7 +15,7 @@ function handler() {
   chrome.tabs.insertCSS(null, { file: "jquery-ui.css"});
   chrome.tabs.query({ active: true, currentWindow: true}, function(activeTabs) {
   chrome.tabs.executeScript(activeTabs[0].id, { code: 'var x = document.createElement("div"); x.id="dialog"; x.innerHTML = "\
-  <iframe id=%22frame%22 width=%22560%22 height=%22315%22 src=https://www.youtube.com/embed/YtWjqtlZldM frameborder=%220%22 allowfullscreen></iframe>";\
+  <iframe id=%22frame%22 width=%22560%22 height=%22315%22 src=https://www.youtube.com/embed/'+result+' frameborder=%220%22 allowfullscreen></iframe>";\
   document.body.appendChild(x); $("#dialog").dialog();' });
     });
 }    
