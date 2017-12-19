@@ -12,11 +12,9 @@
      "tabs",
       "http://*/*", "https://*/*"
   ],
-    "content_scripts": [{
+    "content_scripts": [{ 
     "matches": ["<all_urls>"],
     "js": ["jquery.js", "jquery-ui.js", "contentscript.js"]
     }],
-    "web_accessible_resources": [
-        "frame.html"
-    ]
+    "web_accessible_resources": [ "frame.html"]
 }
