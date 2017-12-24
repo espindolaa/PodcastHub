@@ -11,14 +11,14 @@ function handler() {
   var match = link.match(regExp);
   var result =  (match&&match[7].length==11)? match[7] : false;
 
-  chrome.tabs.query({ active: true, currentWindow: true}, function(activeTabs) {
-  chrome.tabs.executeScript(activeTabs[0].id, { 
-      code: 'var x = document.createElement("div");\
-      x.id="dialog"; \
-      x.innerHTML = "<iframe id=%22frame%22 width=96% height=96% src=https://www.youtube.com/embed/'+result+' allowfullscreen ></iframe>";\
-      document.body.appendChild(x);\
-      $("#dialog").dialog({  beforeClose: function( event, ui ) { $("#dialog").empty();  $("#dialog").remove();}});' 
-    });
+  chrome.tabs.query({ active: true, currentWindow: true}, (activeTabs) => {
+    chrome.tabs.executeScript(activeTabs[0].id, { 
+        code: 'var x = document.createElement("div");\
+        x.id="dialog"; \
+        x.innerHTML = "<iframe id=%22frame%22 width=96% height=96% src=https://www.youtube.com/embed/'+result+' allowfullscreen></iframe>";\
+        document.body.appendChild(x);\
+        $("#dialog").dialog({  beforeClose: function( event, ui ) { $("#dialog").empty();  $("#dialog").remove();}});' 
+      });
   });
 
 }    
